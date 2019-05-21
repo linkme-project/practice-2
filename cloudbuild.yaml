@@ -5,4 +5,4 @@ steps:
 
 # Registry push
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/my-project/practice-2']
+  args: ['push', 'gcr.io/linkme-example/practice-2']
