@@ -6,3 +6,10 @@ steps:
 # Registry push
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/linkme-example/practice-2']
+
+# Deploy
+name: 'gcr.io/cloud-builders/kubectl'
+  args: ['set', 'image', 'deployment/my-deployment', 'practice-2-sha256=gcr.io/linkme-example/practice-2']
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1'
