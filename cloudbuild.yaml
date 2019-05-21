@@ -1,0 +1,8 @@
+steps:
+# Image build
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/linkme-example/practice-2', '.']
+
+# Registry push
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/my-project/practice-2']
